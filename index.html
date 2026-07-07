@@ -4,76 +4,91 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Adv. JH. Parulian Sipahutar, S.H., CLA | Executive Profile</title>
-    <!-- Tailwind CSS Terintegrasi Penuh -->
-    <script src="https://tailwindcss.com"></script>
-    <script>
-        tailwind.config = { theme: { extend: { colors: { gold: '#D4AF37', darkNavy: '#0A1128', deepSlate: '#1C2541' } } } }
-    </script>
-    <!-- FontAwesome Vector Graphics & Icons -->
+    <!-- FontAwesome Ikon -->
     <link rel="stylesheet" href="https://cloudflare.com">
+    
+    <!-- CSS Murni (Deep Law Navy & Gold Theme) -->
     <style>
-        .lang-en, .lang-id { transition: all 0.2s ease; }
+        body { background-color: #0A1128; color: #cbd5e1; font-family: system-ui, -apple-system, sans-serif; margin: 0; padding: 0; }
+        header { border-bottom: 1px solid #1e293b; background-color: #020617; padding: 20px; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.5); }
+        .header-container { max-width: 1000px; margin: 0 auto; display: flex; flex-direction: column; align-items: center; gap: 15px; }
+        @media (min-width: 768px) { .header-container { flex-direction: row; justify-content: space-between; } }
+        h1 { color: #ffffff; margin: 0; font-size: 24px; border-left: 4px solid #D4AF37; padding-left: 12px; }
+        .subtitle { color: #D4AF37; font-weight: 600; text-transform: uppercase; font-size: 11px; margin: 5px 0 0 0; }
+        .lang-btn { background-color: #1e293b; border: 1px solid #334155; color: #94a3b8; padding: 6px 16px; border-radius: 6px; cursor: pointer; }
+        .lang-btn.active { background-color: #D4AF37; color: #0A1128; border-color: #D4AF37; }
+        main { max-width: 1000px; margin: 0 auto; padding: 40px 20px; display: flex; flex-direction: column; gap: 40px; }
+        section { background-color: #1C2541; border: 1px solid #334155; border-radius: 12px; padding: 30px; }
+        h2 { color: #ffffff; font-size: 18px; margin-top: 0; display: flex; align-items: center; gap: 10px; border-bottom: 1px solid #334155; padding-bottom: 10px; }
+        p { line-height: 1.6; text-align: justify; font-size: 15px; }
+        .grid { display: grid; grid-template-columns: 1fr; gap: 20px; }
+        @media (min-width: 768px) { .grid { grid-template-columns: repeat(3, 1fr); } }
+        .card { background-color: #020617; border: 1px solid #334155; border-radius: 12px; padding: 20px; text-decoration: none; color: inherit; transition: 0.3s; }
+        .card:hover { border-color: #D4AF37; transform: translateY(-4px); }
+        .card-header { display: flex; justify-content: space-between; margin-bottom: 15px; }
+        .badge { background-color: #0A1128; font-size: 9px; padding: 2px 8px; border-radius: 4px; }
+        .card-footer { font-size: 11px; color: #64748b; margin-top: 20px; display: flex; justify-content: space-between; }
         .hidden-lang { display: none !important; }
     </style>
 </head>
-<body class="bg-darkNavy text-slate-100 font-sans antialiased min-h-screen">
-    <!-- Header (Bilingual Navigation) -->
-    <header class="border-b border-slate-800 bg-slate-950/90 backdrop-blur sticky top-0 z-50">
-        <div class="max-w-5xl mx-auto px-6 py-5 flex flex-col md:flex-row justify-between items-center gap-6">
+<body>
+    <header>
+        <div class="header-container">
             <div>
-                <h1 class="text-2xl font-bold tracking-wide text-white border-l-4 border-gold pl-3">Adv. JH. Parulian Sipahutar, S.H., CLA</h1>
-                <p class="text-gold font-semibold uppercase tracking-wider text-xs mt-1">Advocate | Certified Legal Auditor | Telecom Infrastructure Specialist</p>
+                <h1>Adv. JH. Parulian Sipahutar, S.H., CLA</h1>
+                <p class="subtitle">Advocate | Certified Legal Auditor</p>
             </div>
-            <div class="flex items-center gap-4">
-                <div class="bg-slate-900 border border-slate-800 rounded-lg p-1 flex gap-1">
-                    <button onclick="setLanguage('id')" id="btn-id" class="px-4 py-1 text-xs font-bold rounded bg-gold text-darkNavy">ID</button>
-                    <button onclick="setLanguage('en')" id="btn-en" class="px-4 py-1 text-xs font-bold rounded text-slate-400 hover:text-white">EN</button>
-                </div>
+            <div style="display: flex; gap: 8px;">
+                <button onclick="setLanguage('id')" id="btn-id" class="lang-btn active">ID</button>
+                <button onclick="setLanguage('en')" id="btn-en" class="lang-btn">EN</button>
             </div>
         </div>
     </header>
-
-    <main class="max-w-5xl mx-auto px-6 py-12 space-y-12">
-        <!-- Executive Summary -->
-        <section class="bg-deepSlate border border-slate-800 rounded-xl p-6 md:p-8">
-            <h2 class="text-lg font-bold text-white mb-4 uppercase tracking-wider flex items-center gap-2">
-                <i class="fas fa-user-tie text-gold"></i>
-                <span class="lang-id">Ringkasan Eksekutif</span><span class="lang-en hidden-lang">Executive Summary</span>
-            </h2>
-            <p class="text-slate-300 leading-relaxed text-sm lang-id">Profesional senior dengan rekam jejak 24 tahun...</p>
-            <p class="text-slate-300 leading-relaxed text-sm lang-en hidden-lang">Senior executive professional with over 24 years...</p>
+    <main>
+        <section>
+            <h2><i class="fas fa-user-tie" style="color: #D4AF37;"></i> <span class="lang-id">Ringkasan Eksekutif</span><span class="lang-en hidden-lang">Executive Summary</span></h2>
+            <p class="lang-id">Profesional senior hukum korporat dan infrastruktur telekomunikasi dengan pengalaman 24+ tahun, spesialis legal auditor dan AI-driven productivity.</p>
+            <p class="lang-en hidden-lang">Senior legal professional with 24+ years of experience in telecommunications and corporate law, specializing in legal auditing and AI-driven productivity.</p>
         </section>
-
-        <!-- Dynamic Content Feed -->
-        <section class="bg-deepSlate border border-slate-800 rounded-xl p-6 md:p-8">
-            <h2 class="text-lg font-bold text-white mb-6 uppercase tracking-wider flex items-center gap-2">
-                <i class="fas fa-terminal text-gold"></i>
-                <span class="lang-id">Bukti Portofolio Sistem AI</span><span class="lang-en hidden-lang">Live AI Portfolio</span>
-            </h2>
-            <div id="devotional-container" class="grid grid-cols-1 md:grid-cols-3 gap-4">
-                <div class="col-span-3 text-center text-slate-400 py-12"><i class="fas fa-circle-notch fa-spin text-gold text-2xl"></i></div>
+        <section>
+            <h2><i class="fas fa-terminal" style="color: #D4AF37;"></i> <span class="lang-id">Portfolio AI</span><span class="lang-en hidden-lang">Live AI Portfolio</span></h2>
+            <div id="devotional-container" class="grid">
+                <i class="fas fa-circle-notch fa-spin" style="color: #D4AF37; text-align: center;"></i>
             </div>
         </section>
     </main>
-
     <script>
         function setLanguage(lang) {
             const elEn = document.querySelectorAll('.lang-en'), elId = document.querySelectorAll('.lang-id'), btnEn = document.getElementById('btn-en'), btnId = document.getElementById('btn-id');
             if (lang === 'en') {
                 elEn.forEach(el => el.classList.remove('hidden-lang')); elId.forEach(el => el.classList.add('hidden-lang'));
-                btnEn.className = "px-4 py-1 text-xs font-bold rounded bg-gold text-darkNavy"; btnId.className = "px-4 py-1 text-xs font-bold rounded text-slate-400";
+                btnEn.classList.add('active'); btnId.classList.remove('active');
             } else {
                 elId.forEach(el => el.classList.remove('hidden-lang')); elEn.forEach(el => el.classList.add('hidden-lang'));
-                btnId.className = "px-4 py-1 text-xs font-bold rounded bg-gold text-darkNavy"; btnEn.className = "px-4 py-1 text-xs font-bold rounded text-slate-400";
+                btnId.classList.add('active'); btnEn.classList.remove('active');
             }
         }
-        // Simplified fetch logic for demonstration
         async function runPipeline() {
             const container = document.getElementById('devotional-container');
-            container.innerHTML = '<div class="col-span-3 text-center text-green-400">Pipeline Connected. Fetching data...</div>';
-            // Note: The full logic with fallback mechanism is included in the source file
+            try {
+                const response = await fetch('https://github.com');
+                const files = await response.json();
+                const items = files.filter(f => f.name.endsWith('.html')).reverse().slice(0, 3);
+                container.innerHTML = '';
+                items.forEach(asset => {
+                    const label = asset.name.replace('.html', '').replace(/-/g, ' ').toUpperCase();
+                    const url = `https://vercel.app{asset.name}`;
+                    container.innerHTML += `
+                        <a href="${url}" target="_blank" class="card">
+                            <div class="card-header"><span class="badge">LIVE DATA</span><i class="fas fa-file-code" style="color:#D4AF37;"></i></div>
+                            <h4>${label}</h4>
+                            <div class="card-footer"><span class="lang-id">Buka</span><span class="lang-en hidden-lang">Open</span><i class="fas fa-chevron-right"></i></div>
+                        </a>`;
+                });
+                setLanguage('id');
+            } catch (err) { container.innerHTML = '<p>Error loading data</p>'; }
         }
-        document.addEventListener('DOMContentLoaded', runPipeline);
+        runPipeline();
     </script>
 </body>
 </html>
