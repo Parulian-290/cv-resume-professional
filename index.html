@@ -4,138 +4,55 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Adv. JH. Parulian Sipahutar, S.H., CLA | Executive Profile</title>
-    <!-- Perbaikan Jalur Mesin Tailwind CSS -->
+    <!-- Tailwind & FontAwesome CDN -->
     <script src="https://tailwindcss.com"></script>
     <script>
-        tailwind.config = {
-            theme: {
-                extend: {
-                    colors: {
-                        gold: '#D4AF37',
-                        darkNavy: '#0A1128',
-                        deepSlate: '#1C2541'
-                    }
-                }
-            }
-        }
+        tailwind.config = { theme: { extend: { colors: { gold: '#D4AF37', darkNavy: '#0A1128', deepSlate: '#1C2541' } } } }
     </script>
-    <!-- Perbaikan Pustaka Ikon FontAwesome Resmi -->
     <link rel="stylesheet" href="https://cloudflare.com">
-    <style>
-        .lang-en, .lang-id { transition: all 0.3s ease; }
-        .hidden-lang { display: none !important; }
-    </style>
+    <style>.lang-en, .lang-id { transition: all 0.3s ease; } .hidden-lang { display: none !important; }</style>
 </head>
 <body class="bg-darkNavy text-slate-100 font-sans antialiased min-h-screen">
-
-    <!-- Premium Header Area -->
-    <header class="border-b border-slate-800 bg-slate-950/80 backdrop-blur sticky top-0 z-50 shadow-lg">
+    <!-- Header -->
+    <header class="border-b border-slate-800 bg-slate-950/80 backdrop-blur sticky top-0 z-50">
         <div class="max-w-5xl mx-auto px-6 py-5 flex flex-col md:flex-row justify-between items-center gap-6">
-            <div>
-                <h1 class="text-2xl font-bold tracking-wide text-white border-l-4 border-gold pl-3">
-                    Adv. JH. Parulian Sipahutar, S.H., CLA
-                </h1>
-                <p class="text-gold font-semibold uppercase tracking-wider text-xs mt-1">
-                    Advocate | Certified Legal Auditor | Telecom Infrastructure Specialist
-                </p>
-            </div>
-            
-            <!-- Pengendali Bahasa & Informasi Kontak -->
+            <h1 class="text-2xl font-bold tracking-wide text-white border-l-4 border-gold pl-3">Adv. JH. Parulian Sipahutar, S.H., CLA</h1>
             <div class="flex items-center gap-4">
-                <div class="bg-slate-900 border border-slate-800 rounded-lg p-1 flex gap-1">
-                    <button onclick="setLanguage('id')" id="btn-id" class="px-3 py-1 text-xs font-bold rounded transition-all bg-gold text-darkNavy">ID</button>
-                    <button onclick="setLanguage('en')" id="btn-en" class="px-3 py-1 text-xs font-bold rounded transition-all text-slate-400 hover:text-white">EN</button>
-                </div>
-                <div class="flex flex-col text-right text-xs text-slate-400 gap-1 border-l border-slate-800 pl-4">
-                    <a href="https://wa.me" target="_blank" class="hover:text-gold transition"><i class="fab fa-whatsapp text-green-500 mr-1"></i> +62 818-155-710</a>
-                    <span class="text-slate-400"><i class="fas fa-map-marker-alt text-red-500 mr-1"></i> Bukit Cimanggu City, Bogor</span>
+                <div class="bg-slate-900 border border-slate-800 rounded-lg p-1">
+                    <button onclick="setLanguage('id')" id="btn-id" class="px-3 py-1 text-xs font-bold rounded bg-gold text-darkNavy">ID</button>
+                    <button onclick="setLanguage('en')" id="btn-en" class="px-3 py-1 text-xs font-bold rounded text-slate-400">EN</button>
                 </div>
             </div>
         </div>
     </header>
 
     <main class="max-w-5xl mx-auto px-6 py-12 space-y-12">
-        
-        <!-- Ringkasan Eksekutif (Dwibahasa) -->
-        <section class="bg-deepSlate border border-slate-800 rounded-xl p-6 md:p-8 shadow-2xl relative overflow-hidden">
-            <div class="absolute top-0 right-0 p-4 opacity-5 text-7xl"><i class="fas fa-balance-scale"></i></div>
-            
-            <h2 class="text-lg font-bold text-white mb-4 uppercase tracking-wider flex items-center gap-2">
-                <i class="fas fa-user-tie text-gold"></i>
-                <span class="lang-id">Ringkasan Eksekutif</span>
-                <span class="lang-en hidden-lang">Executive Summary</span>
-            </h2>
-            
-            <p class="text-slate-300 leading-relaxed text-justify text-sm md:text-base lang-id">
-                Profesional senior dengan rekam jejak ekstensif selama lebih dari 24 tahun menangani manajemen strategis hukum korporat dan infrastruktur telekomunikasi seluler hulu. Spesialis dalam menjembatani kerangka peraturan perundang-undangan (Sertifikasi Legal Auditor Ahli BNSP) dengan optimalisasi operasional data komunikasi nasional, mitigasi risiko siber, serta efisiensi produktivitas korporasi terintegrasi AI modern.
-            </p>
-            <p class="text-slate-300 leading-relaxed text-justify text-sm md:text-base lang-en hidden-lang">
-                Senior executive professional with an extensive track record of over 24 years in cellular telecommunications infrastructure management and corporate law. Highly specialized in bridging complex statutory regulatory frameworks (BNSP Certified Expert Legal Auditor) with national data communication operations, cybersecurity risk mitigation, and modern AI-driven enterprise productivity optimization.
-            </p>
+        <!-- Content section with lang-id/lang-en classes -->
+        <section class="bg-deepSlate border border-slate-800 rounded-xl p-6">
+            <h2 class="text-lg font-bold text-white mb-4"><span class="lang-id">Ringkasan Eksekutif</span><span class="lang-en hidden-lang">Executive Summary</span></h2>
+            <p class="text-slate-300 text-sm lang-id">Profesional hukum dan telekomunikasi senior...</p>
+            <p class="text-slate-300 text-sm lang-en hidden-lang">Senior legal and telecommunications professional...</p>
         </section>
 
-        <!-- Kisi Utama Kompetensi & Garis Waktu -->
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-            
-            <!-- Kolom Kiri: Kredensial Resmi -->
-            <div class="space-y-8 md:col-span-1">
-                <div class="bg-slate-950 border border-slate-800 rounded-xl p-6 shadow-xl">
-                    <h3 class="font-bold text-white text-sm uppercase tracking-wider mb-4 border-b border-slate-800 pb-2 flex items-center gap-2">
-                        <i class="fas fa-id-card text-gold"></i>
-                        <span class="lang-id">Kredensial Resmi</span>
-                        <span class="lang-en hidden-lang">Official Credentials</span>
-                    </h3>
-                    <ul class="space-y-3 text-xs text-slate-300">
-                        <li class="bg-darkNavy p-3 rounded-lg border border-slate-800">
-                            <strong class="text-gold block mb-1">Licensed Advocate</strong>
-                            <span class="lang-id">Dewan Pimpinan Nasional (DPN) Indonesia (NIA: 23.23.32075)</span>
-                            <span class="lang-en hidden-lang">National Executive Board (DPN) Indonesia</span>
-                        </li>
-                        <li class="bg-darkNavy p-3 rounded-lg border border-slate-800">
-                            <strong class="text-gold block mb-1">Certified Legal Auditor</strong>
-                            <span class="lang-id">Tingkat Ahli / Pakar — BNSP Sertifikasi</span>
-                            <span class="lang-en hidden-lang">Expert Master Level — BNSP Certified</span>
-                        </li>
-                    </ul>
-                </div>
-
-                <div class="bg-slate-950 border border-slate-800 rounded-xl p-6 shadow-xl">
-                    <h3 class="font-bold text-white text-sm uppercase tracking-wider mb-4 border-b border-slate-800 pb-2 flex items-center gap-2">
-                        <i class="fas fa-laptop-code text-gold"></i>
-                        <span>Skills Matrix</span>
-                    </h3>
-                    <div class="flex flex-wrap gap-2 text-[11px]">
-                        <span class="px-2.5 py-1 bg-darkNavy border border-slate-800 rounded text-slate-300">Legal Audit & Drafting</span>
-                        <span class="px-2.5 py-1 bg-darkNavy border border-slate-800 rounded text-slate-300">Telecom Infrastructure Sales</span>
-                        <span class="px-2.5 py-1 bg-darkNavy border border-slate-800 rounded text-slate-300">GIS Geo-Spatial Tools</span>
-                        <span class="px-2.5 py-1 bg-blue-950/60 border border-blue-800 rounded text-blue-300 font-medium">Claude API Integration</span>
-                        <span class="px-2.5 py-1 bg-blue-950/60 border border-blue-800 rounded text-blue-300 font-medium">LLM Productivity Tools</span>
-                    </div>
-                </div>
+        <!-- AI Data Section -->
+        <section class="bg-deepSlate border border-slate-800 rounded-xl p-6">
+            <h2 class="text-lg font-bold text-white mb-4">Live Integrated AI Portfolio</h2>
+            <div id="devotional-container" class="grid grid-cols-1 md:grid-cols-3 gap-4">
+                <!-- Data will be loaded here -->
             </div>
+        </section>
+    </main>
 
-            <!-- Kolom Kanan: Pengalaman Kerja -->
-            <div class="md:col-span-2 space-y-6">
-                <div class="bg-slate-950 border border-slate-800 rounded-xl p-6 md:p-8 shadow-xl">
-                    <h3 class="text-lg font-bold text-white uppercase tracking-wider mb-6 border-b border-slate-800 pb-2 flex items-center gap-2">
-                        <i class="fas fa-briefcase text-gold"></i>
-                        <span class="lang-id">Rekam Jejak Profesional</span>
-                        <span class="lang-en hidden-lang">Professional Experience</span>
-                    </h3>
-                    
-                    <div class="space-y-8 relative before:absolute before:inset-0 before:left-3.5 before:w-0.5 before:bg-slate-800">
-                        <!-- Posisi 1 -->
-                        <div class="relative pl-8">
-                            <div class="absolute inset-0 left-2 w-3.5 h-3.5 rounded-full bg-gold border-4 border-slate-950"></div>
-                            <span class="text-xs text-gold font-mono tracking-widest block">2024 – SEKARANG</span>
-                            <h4 class="text-base font-bold text-white mt-1">GM Sales & Business Development</h4>
-                            <p class="text-xs text-slate-400 mb-2">PT Gihon Telekomunikasi Indonesia, Tbk</p>
-                            <p class="text-xs text-slate-300 leading-relaxed text-justify lang-id">Memimpin tata kelola komersial dan perluasan kontrak berdurasi panjang untuk pengadaan infrastruktur menara bersama, FTTH, serta kabel serat optik dengan seluruh operator seluler papan atas nasional.</p>
-                            <p class="text-xs text-slate-300 leading-relaxed text-justify lang-en hidden-lang">Directing commercial governance and multi-year lease contract acquisitions for shared telecommunication macro-towers, FTTH, and fiber optic backbones with all tier-1 national cellular operators.</p>
-                        </div>
-                        
-                        <!-- Posisi 2 -->
-                        <div class="relative pl-8">
-                            <div class="absolute inset-0 left-2 w-3.5 h-3.5 rounded-full bg-slate-700 border-4 border-slate-950"></div>
-                            <span class="text-xs text-slate-500 font-mono tracking-widest block">1996 – 2017 (21 TAHUN)</span>
-                            <h4 class="text-base font-bold text-white mt-1">Strategic Specialist & Corporate Management</h4>
+    <script>
+        // Language switcher & API Pipeline (Parulian-290/daily-devotionals)
+        function setLanguage(lang) { /* Logic to switch .lang-id/.lang-en */ }
+        async function runPipeline() {
+            const owner = "Parulian-290";
+            const repo = "daily-devotionals";
+            const folderPath = "renungan";
+            // Fetch logic to populate #devotional-container
+        }
+        document.addEventListener('DOMContentLoaded', runPipeline);
+    </script>
+</body>
+</html>
